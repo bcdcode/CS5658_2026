@@ -7,7 +7,7 @@
 // CUDA kernel
 __global__ void BFS(int graph[N][N], int dist[N], int level, int *changed)
 {
-    int v = blockIdx.x * blockDim.x + threadIdx.x;
+    int v = blockIdx.x * blockDim.x + threadIdx.x;//blockDim - No. of threads per block
 
     if (v >= N)
         return;
